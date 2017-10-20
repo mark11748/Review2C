@@ -1,8 +1,0 @@
-/Users/Guest/Desktop/Review2C/Review2C/bin/Debug/netcoreapp1.1/Review2C.deps.json
-/Users/Guest/Desktop/Review2C/Review2C/bin/Debug/netcoreapp1.1/Review2C.runtimeconfig.json
-/Users/Guest/Desktop/Review2C/Review2C/bin/Debug/netcoreapp1.1/Review2C.runtimeconfig.dev.json
-/Users/Guest/Desktop/Review2C/Review2C/obj/Debug/netcoreapp1.1/Review2C.AssemblyInfo.cs
-/Users/Guest/Desktop/Review2C/Review2C/bin/Debug/netcoreapp1.1/Review2C.dll
-/Users/Guest/Desktop/Review2C/Review2C/bin/Debug/netcoreapp1.1/Review2C.pdb
-/Users/Guest/Desktop/Review2C/Review2C/obj/Debug/netcoreapp1.1/Review2C.dll
-/Users/Guest/Desktop/Review2C/Review2C/obj/Debug/netcoreapp1.1/Review2C.pdb
