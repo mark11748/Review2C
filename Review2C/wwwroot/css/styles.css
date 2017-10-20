@@ -1,0 +1,22 @@
+.Header {
+  border-top: 10px solid #ffffff;
+  border-right:  10px solid #ffffff;
+  border-left: solid #cecaca;
+  border-bottom: 8px solid #c1bfbf;
+  color: #00faff;
+
+  margin: 25px;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+body {
+  margin: 10px;
+  padding: 5px;
+  background-color: black;
+  color: #00faff;
+}
+
+button {
+  color: black;
+}
