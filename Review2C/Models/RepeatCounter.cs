@@ -36,15 +36,15 @@ namespace Review2C.Models
       SetPrimary(_primary.ToLower());
       SetTarget(_target.ToLower());
 
-      if (this.ErroneousInput()>0)
+      if (ErroneousInput()>0)
       { SetMatchesFound(0); return 0;}
-      for (int i = 0 ; i <= this.GetPrimary().Length-this.GetTarget().Length ; i++)
+      for (int i = 0 ; i <= GetPrimary().Length-GetTarget().Length ; i++)
       {
-        if (this.GetPrimary()[i] == this.GetTarget()[0])
+        if (GetPrimary()[i] == GetTarget()[0])
         {
-          for(int n = 0 ; n < this.GetTarget().Length ; n++)
+          for(int n = 0 ; n < GetTarget().Length ; n++)
           {
-            if (this.GetPrimary()[i+n] != this.GetTarget()[n])
+            if (GetPrimary()[i+n] != GetTarget()[n])
             { currentMatch = false; break; }
             currentMatch = true;
           }
@@ -53,7 +53,7 @@ namespace Review2C.Models
         }
       }
 
-      return this.GetMatchesFound();
+      return GetMatchesFound();
     }
 
     public int ErroneousInput()
@@ -63,7 +63,7 @@ namespace Review2C.Models
       if (_target.Length<=0)
       { SetTarget("ERR: NO STRING GIVEN"); SetError(_error++); }
 
-      return this.GetError();
+      return GetError();
     }
   }
 }

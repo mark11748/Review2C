@@ -13,7 +13,8 @@ This is a C# program that takes a string of words from a user and a word to sear
 | Program prompts user with two input fields at homepage| N/A | N/A |
 | User enters a string of words | "That dog is one lucky dog"| "That dog is one lucky dog" |
 | User enters a word to search for |"Dog" |"Dog" |
-| Program converts strings to lowercase and looks for users sub-string. Displays the times it occurs on a new page and give a link to the homepage should the user wish to input another string and search word | N/A (submit button pressed?)| There were 2 instances of dog in your string |
+| Program preforms case-insensitive search for the search word. Displays the number of occurrences of said word on a new page|(submit button pressed)| There were 2 instances of dog in your string |
+| If/when link to the homepage is clicked on result page user is redirected to homepage and given another opportunity to input another string of words and search word| *clicks link* | *Redirected to homepage* |
 
 ### Setup/Installation
 * Download from GitHub.

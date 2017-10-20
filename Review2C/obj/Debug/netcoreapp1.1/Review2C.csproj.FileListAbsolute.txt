@@ -6,3 +6,12 @@
 /Users/Guest/Desktop/Review2C.Solutions/Review2C/obj/Debug/netcoreapp1.1/Review2C.AssemblyInfo.cs
 /Users/Guest/Desktop/Review2C.Solutions/Review2C/obj/Debug/netcoreapp1.1/Review2C.dll
 /Users/Guest/Desktop/Review2C.Solutions/Review2C/obj/Debug/netcoreapp1.1/Review2C.pdb
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/bin/Debug/netcoreapp1.1/Review2C.deps.json
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/bin/Debug/netcoreapp1.1/Review2C.runtimeconfig.json
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/bin/Debug/netcoreapp1.1/Review2C.runtimeconfig.dev.json
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/bin/Debug/netcoreapp1.1/Review2C.dll
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/bin/Debug/netcoreapp1.1/Review2C.pdb
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/obj/Debug/netcoreapp1.1/Review2C.csproj.CoreCompileInputs.cache
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/obj/Debug/netcoreapp1.1/Review2C.AssemblyInfo.cs
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/obj/Debug/netcoreapp1.1/Review2C.dll
+/Users/markWoodward/Desktop/Review2C.Solutions/Review2C/obj/Debug/netcoreapp1.1/Review2C.pdb
