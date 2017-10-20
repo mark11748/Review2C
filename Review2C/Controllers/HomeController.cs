@@ -12,5 +12,13 @@ namespace Review2C.Controllers
       {
         return View();
       }
+
+      [HttpPost("/Result")]
+      public ActionResult Result()
+      {
+        RepeatCounter myCounter = new RepeatCounter(Request.Form["main-str"],Request.Form["search-str"]);
+        myCounter.CountRepeats();
+        return View(myCounter);
+      }
     }
 }

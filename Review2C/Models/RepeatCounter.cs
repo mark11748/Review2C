@@ -44,9 +44,10 @@ namespace Review2C.Models
             currentMatch = true;
           }
           if (currentMatch)
-          { matchesFound+=1; }
+          { _matchesFound+=1; }
         }
       }
+      return this.GetMatchesFound();
     }
   }
 }
