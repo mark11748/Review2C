@@ -9,10 +9,14 @@ namespace Review2C.Tests
   public class Review2CTest
   {
     [TestMethod]
-    public void Score_PlayerEntersALetter_AScoreOfOne()
+    public void CountRepeats_PlayerEntersStringOfWords_()
     {
 
     }
+    [TestMethod]
+    public void CountRepeats_PlayerEntersSearchWord_()
+    {
 
+    }
   }
 }

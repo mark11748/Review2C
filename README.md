@@ -11,8 +11,9 @@ This is a C# program that takes a string of words from a user and a word to sear
 |Behavior | Example Input| Example Output|
 | ---|:---:| :---:|
 | Program prompts user with two input fields at homepage| N/A | N/A |
-| User enters a string of words and a word to search for | "that dog is one lucky dog", "dog" | 2 |
-| Program displays the output on a new page and give a link to the homepage should the user wish to input another string and search word | \*submit\* button pressed| There were 2 instances of dog in your string |
+| User enters a string of words | "That dog is one lucky dog"| "That dog is one lucky dog" |
+| User enters a word to search for |"Dog" |"Dog" |
+| Program converts strings to lowercase and looks for users sub-string. Displays the times it occurs on a new page and give a link to the homepage should the user wish to input another string and search word | N/A (submit button pressed?)| There were 2 instances of dog in your string |
 
 ### Setup/Installation
 * Download from GitHub.
