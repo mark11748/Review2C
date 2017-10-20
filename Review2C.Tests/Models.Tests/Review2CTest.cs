@@ -125,5 +125,29 @@ namespace Review2C.Tests
       Assert.AreEqual(true, matchesFound == 1);
     }
 
+    [TestMethod]
+    public void ErrorTest_MissingStrings_FalseCase()
+    {
+      RepeatCounter myCounter = new RepeatCounter("","");
+      if (myCounter.GetPrimary().Length<=0)
+      { myCounter.SetPrimary("ERR: NO STRING GIVEN"); myCounter.SetError(1); }
+      if (myCounter.GetTarget().Length<=0)
+      { myCounter.SetTarget("ERR: NO STRING GIVEN"); myCounter.SetError(1); }
+
+      Assert.AreEqual(false, myCounter.GetError() == 0 );
+
+    }
+    [TestMethod]
+    public void ErrorTest_MissingStrings_TrueCase()
+    {
+      RepeatCounter myCounter = new RepeatCounter("","");
+      if (myCounter.GetPrimary().Length<=0)
+      { myCounter.SetPrimary("ERR: NO STRING GIVEN"); myCounter.SetError(1); }
+      if (myCounter.GetTarget().Length<=0)
+      { myCounter.SetTarget("ERR: NO STRING GIVEN"); myCounter.SetError(1); }
+
+      Assert.AreEqual(true, myCounter.GetError() == 2 );
+
+    }
   }
 }

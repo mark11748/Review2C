@@ -16,7 +16,7 @@ namespace Review2C.Controllers
       [HttpPost("/Result")]
       public ActionResult Result()
       {
-        RepeatCounter myCounter = new RepeatCounter(Request.Form["main-str"],Request.Form["search-str"]);
+        RepeatCounter myCounter = new RepeatCounter((string)Request.Form["main-str"]??"",(string)Request.Form["search-str"]??"");
         myCounter.CountRepeats();
         return View(myCounter);
       }
