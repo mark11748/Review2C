@@ -9,14 +9,30 @@ namespace Review2C.Tests
   public class Review2CTest
   {
     [TestMethod]
-    public void CountRepeats_PlayerEntersStringOfWords_()
+    public void RepeatCounter_BuildCounter_()
     {
-
+      try
+      {
+        RepeatCounter myCounter = new RepeatCounter();
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine("Message = {0}", ex.Message);
+        Console.WriteLine("Source = {0}", ex.Source);
+        Console.WriteLine("StackTrace = {0}", ex.StackTrace);
+      }
     }
     [TestMethod]
-    public void CountRepeats_PlayerEntersSearchWord_()
+    public void CountRepeats_PlayerEntersPrimaryString_NoTarget()
     {
-
+      RepeatCounter myCounter = new RepeatCounter("word","");
+      Assert.AreEqual(true, (myCounter.GetPrimary().Length)>(myCounter.GetTarget().Length));
+    }
+    [TestMethod]
+    public void CountRepeats_PlayerEntersTargetString_NoPrimary()
+    {
+      RepeatCounter myCounter = new RepeatCounter("","word");
+      Assert.AreEqual(true, (myCounter.GetPrimary().Length)<(myCounter.GetTarget().Length));
     }
   }
 }
