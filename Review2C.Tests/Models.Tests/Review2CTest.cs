@@ -46,7 +46,7 @@ namespace Review2C.Tests
 
 
     [TestMethod]
-    public void CountRepeats_FindInstancesOfWord()
+    public void CountRepeats_FindInstancesOfWord_CounterTest()
     {
       RepeatCounter myCounter = new RepeatCounter("ThIs String contains two instances of the word STRING","string");
       int matchesFound = 0;
@@ -68,18 +68,62 @@ namespace Review2C.Tests
         {
           Console.WriteLine("Possible Match found at index: "+i);
 
-          for(int n = 1 ; n < myCounter.GetTarget().Length ; n++)
+          for(int n = 0 ; n < myCounter.GetTarget().Length ; n++)
           // ^^ search for the rest of the phrase before moving on ^^
           {
-            if (myCounter.GetPrimary()[i+n] != myCounter.GetTarget()[n])
+            if (myCounter.GetPrimary()[i+n] != myCounter.GetTarget()[n]) //if the selected index in the primary string + target_offset ever mismatches target[offset] case is not a match
             { currentMatch = false; break; }
             currentMatch = true;
           }
-          if (currentMatch)
-          { matchesFound++; }
+          if (currentMatch) //if the target's length is looped through and all letters match increment matchesFound
+          {
+            Console.WriteLine("Match found at index: "+i);
+            matchesFound++;
+          }
         }
       }
       Assert.AreEqual(true, matchesFound == 2);
     }
+
+    [TestMethod]
+    public void CountRepeats_FindInstancesOfWord_LoopRangeCheck()
+    {
+      RepeatCounter myCounter = new RepeatCounter("ThIs String contains two instances of the word STRIN","string");
+      int matchesFound = 0;
+      bool currentMatch = false;
+
+      Console.WriteLine(myCounter.GetPrimary() +" : "+ myCounter.GetTarget());
+
+      myCounter.SetPrimary(myCounter.GetPrimary().ToLower());
+      myCounter.SetTarget(myCounter.GetTarget().ToLower());
+
+      Console.WriteLine(myCounter.GetPrimary() +" : "+ myCounter.GetTarget());
+
+      for (int i = 0 ; i <= myCounter.GetPrimary().Length-myCounter.GetTarget().Length ; i++)
+      // ^^ itterates through the main string. ^^
+      //    don't bother continuing to look if there's not enough space to complete search term
+      {
+        if (myCounter.GetPrimary()[i] == myCounter.GetTarget()[0])
+        // ^^ If you find an instance of the first letter of the search word ^^
+        {
+          Console.WriteLine("Possible Match found at index: "+i);
+
+          for(int n = 0 ; n < myCounter.GetTarget().Length ; n++)
+          // ^^ search for the rest of the phrase before moving on ^^
+          {
+            if (myCounter.GetPrimary()[i+n] != myCounter.GetTarget()[n]) //if the selected index in the primary string + target_offset ever mismatches target[offset] case is not a match
+            { currentMatch = false; break; }
+            currentMatch = true;
+          }
+          if (currentMatch) //if the target's length is looped through and all letters match increment matchesFound
+          {
+            Console.WriteLine("Match found at index: "+i);
+            matchesFound++;
+          }
+        }
+      }
+      Assert.AreEqual(true, matchesFound == 1);
+    }
+
   }
 }
